@@ -1,0 +1,61 @@
+2021-02-23 03:02:52 info: -------------------------------------------------
+2021-02-23 03:02:53 info: >>> Running Unit Test `ex1-doubleEvenNumbers` <<<
+2021-02-23 03:02:53 info: -------------------------------------------------
+2021-02-23 03:02:53 info: Exercise has not yet been modified
+2021-02-23 03:03:52 info: All unit tests passed.
+2021-02-23 03:04:14 error: *** Spell Checker Report ***
+
+ex1-doubleEvenNumbers.js:14:12 - Unknown word (doublication)
+ex1-doubleEvenNumbers.js:18:25 - Unknown word (doublication)
+2021-02-23 03:04:44 info: Disclaimer turned off
+2021-02-23 03:05:23 info: --------------------------------------------
+2021-02-23 03:05:23 info: >>> Running Unit Test `ex2-mondaysWorth` <<<
+2021-02-23 03:05:23 info: --------------------------------------------
+2021-02-23 03:05:23 info: Exercise has not yet been modified
+2021-02-23 03:05:29 error: *** Unit Test Error Report ***
+
+- mondaysWorth should exist and be executable
+
+2021-02-23 03:05:30 error: *** ESLint Report ***
+ex2-mondaysWorth.js
+  51:7  error  Parsing error: Identifier 'earnings' has already been declared
+
+✖ 1 problem (1 error, 0 warnings)
+2021-02-23 03:07:40 info: --------------------------------------------
+2021-02-23 03:07:40 info: >>> Running Unit Test `ex2-mondaysWorth` <<<
+2021-02-23 03:07:40 info: --------------------------------------------
+2021-02-23 03:07:44 info: All unit tests passed.
+2021-02-23 03:07:51 info: All steps were completed successfully
+2021-02-23 03:08:19 info: --------------------------------------------
+2021-02-23 03:08:19 info: >>> Running Unit Test `ex3-lemonAllergy` <<<
+2021-02-23 03:08:19 info: --------------------------------------------
+2021-02-23 03:08:19 info: Exercise has not yet been modified
+2021-02-23 03:08:24 info: All unit tests passed.
+2021-02-23 03:08:29 info: All steps were completed successfully
+2021-02-23 03:08:59 info: ------------------------------------------------
+2021-02-23 03:08:59 info: >>> Running Unit Test `ex4-publishSubscribe` <<<
+2021-02-23 03:08:59 info: ------------------------------------------------
+2021-02-23 03:08:59 info: Exercise has not yet been modified
+2021-02-23 03:09:04 info: All unit tests passed.
+2021-02-23 03:09:08 info: All steps were completed successfully
+2021-02-23 03:09:24 info: ------------------------------------------------
+2021-02-23 03:09:24 info: >>> Running Unit Test `ex4-publishSubscribe` <<<
+2021-02-23 03:09:24 info: ------------------------------------------------
+2021-02-23 03:09:24 info: Exercise has not yet been modified
+2021-02-23 03:09:27 info: All unit tests passed.
+2021-02-23 03:09:31 info: All steps were completed successfully
+2021-02-23 03:10:42 info: ------------------------------------------------
+2021-02-23 03:10:42 info: >>> Running Unit Test `ex4-publishSubscribe` <<<
+2021-02-23 03:10:42 info: ------------------------------------------------
+2021-02-23 03:10:46 info: All unit tests passed.
+2021-02-23 03:10:50 info: All steps were completed successfully
+2021-02-23 03:12:59 info: --------------------------------------
+2021-02-23 03:12:59 info: >>> Running Unit Test `ex5-wallet` <<<
+2021-02-23 03:12:59 info: --------------------------------------
+2021-02-23 03:13:03 info: All unit tests passed.
+2021-02-23 03:13:06 info: All steps were completed successfully
+2021-02-23 03:13:22 info: --------------------------------------------
+2021-02-23 03:13:22 info: >>> Running Unit Test `ex2-mondaysWorth` <<<
+2021-02-23 03:13:22 info: --------------------------------------------
+2021-02-23 03:13:26 info: All unit tests passed.
+2021-02-23 03:13:29 info: All steps were completed successfully

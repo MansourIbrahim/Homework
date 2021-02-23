@@ -39,12 +39,18 @@ Good luck with completing `createPublisher`!
 
 function createPublisher() {
   const listeners = [];
+
   return {
-    subscribe: function (/* TODO parameter(s) go here */) {
+    subscribe: function (/* TODO parameter(s) go here */ listenerFunctions) {
       // TODO complete this function
+      return listeners.push(listenerFunctions);
     },
-    notify: function (/* TODO parameter(s) go here */) {
+    notify: function (/* TODO parameter(s) go here */ massage) {
       // TODO complete this function
+      function outPut(consol) {
+        consol(massage);
+      }
+      listeners.forEach(outPut);
     },
   };
 }
