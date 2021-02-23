@@ -1,0 +1,19 @@
+*** Unit Test Error Report ***
+
+- tellFortune should call function `selectRandomly` for each of its arguments
+
+*** ESLint Report ***
+
+ex3-tellFortune.js
+  70:7  warning  'x' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+*** Spell Checker Report ***
+
+ex3-tellFortune.js:40:4 - Unknown word (Aadam)
+ex3-tellFortune.js:41:4 - Unknown word (Alaa)
+ex3-tellFortune.js:43:4 - Unknown word (Elly)
+ex3-tellFortune.js:51:4 - Unknown word (Hoogeveen)
+ex3-tellFortune.js:52:4 - Unknown word (Almere)

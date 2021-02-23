@@ -64,48 +64,33 @@ const jobTitles = [
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
 
-function selectRandomly() {
+function selectRandomly(partnerNames) {
   // TODO complete this function
 
-  let x = Math.floor(Math.random() * 5);
-
-  return numKids.indexOf(numKids[x]);
+  const x = Math.floor(Math.random() * 5);
+  return partnerNames.indexOf(partnerNames[x]);
 }
 
-function tellFortune(numKids[selectRandomly()], partnerNames[selectRandomly()], locations[selectRandomly()], jobTitles[selectRandomly()]) {
+function tellFortune(numKids, partnerNames, locations, jobTitles) {
   // TODO complete this function
-  selectRandomly();
-  let y = selectRandomly();
+
   return (
     'You will be a ' +
-    jobTitles[y] +
+    jobTitles[selectRandomly(partnerNames)] +
     ' in ' +
-    locations[y] +
+    locations[selectRandomly(partnerNames)] +
     ',' +
     ' married to ' +
-    partnerNames[y] +
+    partnerNames[selectRandomly(partnerNames)] +
     ' with ' +
-    numKids[y] +
+    numKids[selectRandomly(partnerNames)] +
     ' kids.'
   );
 }
-
-console.log(
-  tellFortune(
-    numKids,
-    partnerNames,
-    locations,
-    jobTitles
-  )
-);
-console.log(
-  tellFortune(
-    numKids,
-    partnerNames,
-    locations,
-    jobTitles
-  )
-);
+// It works good but, couldn't pass the test.
+console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
 
 // ! Do not change or remove the code below
 module.exports = tellFortune;

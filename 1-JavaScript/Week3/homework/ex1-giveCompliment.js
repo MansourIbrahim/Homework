@@ -31,7 +31,7 @@ function giveCompliment(/* TODO parameter(s) go here */ name) {
     'beautiful',
     'impressive',
   ];
-  let x = Math.random();
+  const x = Math.random();
   return 'You are ' + compliments[Math.floor(x * 10)] + ', ' + name + '!';
 }
 console.log(giveCompliment('Mansour'));

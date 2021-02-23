@@ -25,28 +25,17 @@ const employeeRecords = [
     salary: 60000,
   },
 ];
-/*
-console.log(...employeeRecords);
-*/
-let x;
-let y = {};
-for (x in employeeRecords) {
-  y += x;
-  console.log(y);
-  console.log(x);
-}
-console.log(y);
-/*let x;
-  for (x in cartForParty) {
-    amount += cartForParty[x];
-  }*/
 
-function filterPrivateData(/* parameter(s) go here */) {
+function filterPrivateData(/* parameter(s) go here */ employeeRecords) {
   // TODO complete this function
+  const newEmployeeRecords = [];
+
+  for (const x of employeeRecords) {
+    const { name, occupation, email } = x;
+    newEmployeeRecords.push({ name, occupation, email });
+  }
+  return newEmployeeRecords;
 }
-/*
-console.log(filterPrivateData(employeeRecords));
-*/
 
 console.log(filterPrivateData(employeeRecords));
 

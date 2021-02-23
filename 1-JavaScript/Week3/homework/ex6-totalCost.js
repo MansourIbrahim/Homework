@@ -35,7 +35,7 @@ function calculateTotalPrice(cartForParty) {
   for (x in cartForParty) {
     amount += cartForParty[x];
   }
-  return console.log('"Total: €' + amount.toFixed(2) + '"');
+  return 'Total: €' + amount.toFixed(2);
 }
 
 calculateTotalPrice({

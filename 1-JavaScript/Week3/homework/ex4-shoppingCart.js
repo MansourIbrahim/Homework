@@ -28,7 +28,7 @@ function addToShoppingCart(/* parameters go here */ item) {
   if (shoppingCart.length > 3) {
     shoppingCart.shift();
   }
-  console.log('You bought ' + shoppingCart.join(', ') + '!');
+  return 'You bought ' + shoppingCart.join(', ') + '!';
 }
 
 addToShoppingCart('chocolate'); // Returns "You bought bananas, milk, chocolate!"
