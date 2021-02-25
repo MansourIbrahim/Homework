@@ -64,11 +64,11 @@ const jobTitles = [
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
 
-function selectRandomly(partnerNames) {
+function selectRandomly(anyArray) {
   // TODO complete this function
 
   const x = Math.floor(Math.random() * 5);
-  return partnerNames.indexOf(partnerNames[x]);
+  return anyArray[x];
 }
 
 function tellFortune(numKids, partnerNames, locations, jobTitles) {
@@ -76,14 +76,14 @@ function tellFortune(numKids, partnerNames, locations, jobTitles) {
 
   return (
     'You will be a ' +
-    jobTitles[selectRandomly(partnerNames)] +
+    selectRandomly(jobTitles) +
     ' in ' +
-    locations[selectRandomly(partnerNames)] +
+    selectRandomly(locations) +
     ',' +
     ' married to ' +
-    partnerNames[selectRandomly(partnerNames)] +
+    selectRandomly(partnerNames) +
     ' with ' +
-    numKids[selectRandomly(partnerNames)] +
+    selectRandomly(numKids) +
     ' kids.'
   );
 }
