@@ -26,8 +26,15 @@ const employeeRecords = [
   },
 ];
 
-function filterPrivateData(/* parameter(s) go here */) {
+function filterPrivateData(/* parameter(s) go here */ employeeRecords) {
   // TODO complete this function
+  const newEmployeeRecords = [];
+
+  for (const x of employeeRecords) {
+    const { name, occupation, email } = x;
+    newEmployeeRecords.push({ name, occupation, email });
+  }
+  return newEmployeeRecords;
 }
 
 console.log(filterPrivateData(employeeRecords));

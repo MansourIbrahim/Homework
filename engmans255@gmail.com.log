@@ -1,0 +1,218 @@
+2021-02-23 03:58:28 info: ----------------------------------------------
+2021-02-23 03:58:28 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2021-02-23 03:58:28 info: ----------------------------------------------
+2021-02-23 03:58:57 info: All unit tests passed.
+2021-02-23 03:59:05 error: *** ESLint Report ***
+
+ex1-giveCompliment.js
+  34:7  warning  'x' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-02-23 03:59:13 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:37:29 - Unknown word (Mansour)
+ex1-giveCompliment.js:38:29 - Unknown word (Mansour)
+ex1-giveCompliment.js:39:29 - Unknown word (Mansour)
+ex1-giveCompliment.js:42:17 - Unknown word (Mansour)
+2021-02-23 04:00:14 info: ----------------------------------------------
+2021-02-23 04:00:14 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2021-02-23 04:00:14 info: ----------------------------------------------
+2021-02-23 04:00:18 info: All unit tests passed.
+2021-02-23 04:00:21 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:37:29 - Unknown word (Mansour)
+ex1-giveCompliment.js:38:29 - Unknown word (Mansour)
+ex1-giveCompliment.js:39:29 - Unknown word (Mansour)
+ex1-giveCompliment.js:42:17 - Unknown word (Mansour)
+2021-02-23 04:02:20 info: ----------------------------------------
+2021-02-23 04:02:20 info: >>> Running Unit Test `ex2-dogYears` <<<
+2021-02-23 04:02:20 info: ----------------------------------------
+2021-02-23 04:02:25 info: All unit tests passed.
+2021-02-23 04:02:28 info: All steps were completed successfully
+2021-02-23 05:51:43 info: -------------------------------------------
+2021-02-23 05:51:43 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2021-02-23 05:51:43 info: -------------------------------------------
+2021-02-23 05:52:19 error: *** Unit Test Error Report ***
+
+- tellFortune should call function `selectRandomly` for each of its arguments
+- tellFortune should tell the fortune by randomly selecting array values
+  fortune-telling is not randomly composed
+
+2021-02-23 05:52:27 error: *** ESLint Report ***
+
+ex3-tellFortune.js
+  70:7  warning  'x' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  79:7  warning  'y' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2021-02-23 05:52:33 error: *** Spell Checker Report ***
+
+ex3-tellFortune.js:40:4 - Unknown word (Aadam)
+ex3-tellFortune.js:41:4 - Unknown word (Alaa)
+ex3-tellFortune.js:43:4 - Unknown word (Elly)
+ex3-tellFortune.js:51:4 - Unknown word (Hoogeveen)
+ex3-tellFortune.js:52:4 - Unknown word (Almere)
+2021-02-23 05:59:58 info: -------------------------------------------
+2021-02-23 05:59:58 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2021-02-23 05:59:58 info: -------------------------------------------
+2021-02-23 06:00:27 error: *** Unit Test Error Report ***
+
+- tellFortune should call function `selectRandomly` for each of its arguments
+
+2021-02-23 06:00:35 error: *** ESLint Report ***
+
+ex3-tellFortune.js
+  70:7  warning  'x' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-02-23 06:00:39 error: *** Spell Checker Report ***
+
+ex3-tellFortune.js:40:4 - Unknown word (Aadam)
+ex3-tellFortune.js:41:4 - Unknown word (Alaa)
+ex3-tellFortune.js:43:4 - Unknown word (Elly)
+ex3-tellFortune.js:51:4 - Unknown word (Hoogeveen)
+ex3-tellFortune.js:52:4 - Unknown word (Almere)
+2021-02-23 06:04:50 info: -------------------------------------------
+2021-02-23 06:04:50 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2021-02-23 06:04:50 info: -------------------------------------------
+2021-02-23 06:04:54 error: *** Unit Test Error Report ***
+
+- tellFortune should call function `selectRandomly` for each of its arguments
+- tellFortune should tell the fortune by randomly selecting array values
+  fortune-telling is not randomly composed
+
+2021-02-23 06:04:55 error: *** ESLint Report ***
+
+ex3-tellFortune.js
+  70:7  warning  'x' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-02-23 06:04:57 error: *** Spell Checker Report ***
+
+ex3-tellFortune.js:40:4 - Unknown word (Aadam)
+ex3-tellFortune.js:41:4 - Unknown word (Alaa)
+ex3-tellFortune.js:43:4 - Unknown word (Elly)
+ex3-tellFortune.js:51:4 - Unknown word (Hoogeveen)
+ex3-tellFortune.js:52:4 - Unknown word (Almere)
+2021-02-23 06:12:45 info: -------------------------------------------
+2021-02-23 06:12:45 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2021-02-23 06:12:45 info: -------------------------------------------
+2021-02-23 06:12:50 error: *** Unit Test Error Report ***
+
+- tellFortune should call function `selectRandomly` for each of its arguments
+- tellFortune should tell the fortune by randomly selecting array values
+  fortune-telling is not randomly composed
+
+2021-02-23 06:12:54 error: *** Spell Checker Report ***
+
+ex3-tellFortune.js:40:4 - Unknown word (Aadam)
+ex3-tellFortune.js:41:4 - Unknown word (Alaa)
+ex3-tellFortune.js:43:4 - Unknown word (Elly)
+ex3-tellFortune.js:51:4 - Unknown word (Hoogeveen)
+ex3-tellFortune.js:52:4 - Unknown word (Almere)
+2021-02-23 06:15:53 info: -------------------------------------------
+2021-02-23 06:15:53 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2021-02-23 06:15:53 info: -------------------------------------------
+2021-02-23 06:15:56 error: *** Unit Test Error Report ***
+
+- tellFortune should call function `selectRandomly` for each of its arguments
+
+2021-02-23 06:15:58 error: *** ESLint Report ***
+
+ex3-tellFortune.js
+  70:7  warning  'x' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-02-23 06:15:59 error: *** Spell Checker Report ***
+
+ex3-tellFortune.js:40:4 - Unknown word (Aadam)
+ex3-tellFortune.js:41:4 - Unknown word (Alaa)
+ex3-tellFortune.js:43:4 - Unknown word (Elly)
+ex3-tellFortune.js:51:4 - Unknown word (Hoogeveen)
+ex3-tellFortune.js:52:4 - Unknown word (Almere)
+2021-02-23 06:26:55 info: --------------------------------------------
+2021-02-23 06:26:55 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2021-02-23 06:26:55 info: --------------------------------------------
+2021-02-23 06:27:03 error: *** Unit Test Error Report ***
+
+- addToShoppingCart should add chocolate
+  Expected: You bought bananas, milk, chocolate!
+  Received: undefined
+- addToShoppingCart should remove bananas after adding waffles
+  Expected: You bought milk, chocolate, waffles!
+  Received: undefined
+- addToShoppingCart should remove milk after adding tea
+  Expected: You bought chocolate, waffles, tea!
+  Received: undefined
+
+2021-02-23 06:27:42 info: --------------------------------------------
+2021-02-23 06:27:42 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2021-02-23 06:27:42 info: --------------------------------------------
+2021-02-23 06:27:49 info: All unit tests passed.
+2021-02-23 06:27:52 info: All steps were completed successfully
+2021-02-23 06:28:27 info: -------------------------------------------------
+2021-02-23 06:28:27 info: >>> Running Unit Test `ex5-shoppingCartRedux` <<<
+2021-02-23 06:28:27 info: -------------------------------------------------
+2021-02-23 06:28:31 info: All unit tests passed.
+2021-02-23 06:28:34 info: All steps were completed successfully
+2021-02-23 06:30:44 info: -----------------------------------------
+2021-02-23 06:30:44 info: >>> Running Unit Test `ex6-totalCost` <<<
+2021-02-23 06:30:44 info: -----------------------------------------
+2021-02-23 06:30:48 error: *** Unit Test Error Report ***
+
+- calculateTotalPrice should return the total price in Euros
+
+2021-02-23 06:31:35 info: -----------------------------------------
+2021-02-23 06:31:35 info: >>> Running Unit Test `ex6-totalCost` <<<
+2021-02-23 06:31:35 info: -----------------------------------------
+2021-02-23 06:32:02 error: *** Unit Test Error Report ***
+
+- calculateTotalPrice should return the total price in Euros
+  Expected: Total: €7.64
+  Received: "Total: €7.64"
+
+2021-02-23 06:32:43 info: -----------------------------------------
+2021-02-23 06:32:43 info: >>> Running Unit Test `ex6-totalCost` <<<
+2021-02-23 06:32:43 info: -----------------------------------------
+2021-02-23 06:32:49 info: All unit tests passed.
+2021-02-23 06:32:53 info: All steps were completed successfully
+2021-02-23 09:49:17 info: -------------------------------------------
+2021-02-23 09:49:17 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2021-02-23 09:49:17 info: -------------------------------------------
+2021-02-23 09:50:06 info: All unit tests passed.
+2021-02-23 09:50:18 error: *** ESLint Report ***
+
+ex7-mindPrivacy.js
+  29:29  warning  No literal                                                     no-restricted-syntax
+  32:7   warning  'newEmployeeRecords' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  34:12  warning  'x' is never reassigned. Use 'const' instead                   no-autofix/prefer-const
+
+✖ 3 problems (0 errors, 3 warnings)
+
+
+2021-02-23 10:11:36 info: -------------------------------------------
+2021-02-23 10:11:36 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2021-02-23 10:11:36 info: -------------------------------------------
+2021-02-23 10:11:45 info: All unit tests passed.
+2021-02-23 10:11:51 info: All steps were completed successfully
+2021-02-25 12:06:36 info: -------------------------------------------
+2021-02-25 12:06:36 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2021-02-25 12:06:36 info: -------------------------------------------
+2021-02-25 12:07:05 info: All unit tests passed.
+2021-02-25 12:07:32 error: *** Spell Checker Report ***
+
+ex3-tellFortune.js:40:4 - Unknown word (Aadam)
+ex3-tellFortune.js:41:4 - Unknown word (Alaa)
+ex3-tellFortune.js:43:4 - Unknown word (Elly)
+ex3-tellFortune.js:51:4 - Unknown word (Hoogeveen)
+ex3-tellFortune.js:52:4 - Unknown word (Almere)
