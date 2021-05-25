@@ -31,12 +31,24 @@ function beforeAllHelper(testFilePath, options = {}) {
   const result = {};
 
   if (!options.noRequire) {
+    let randomSpy, timeoutSpy, intervalSpy, consoleLogSpy;
     try {
-      const spy = jest.spyOn(console, 'log').mockImplementation();
+      if (options.zeroRandom) {
+        randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+      }
+      if (options.nukeTimers) {
+        timeoutSpy = jest.spyOn(global, 'setTimeout').mockImplementation();
+        intervalSpy = jest.spyOn(global, 'setInterval').mockImplementation();
+      }
+      consoleLogSpy = jest.spyOn(console, 'log').mockImplementation();
       result.exported = require(exercisePath);
-      spy.mockRestore();
-    } catch (_) {
-      // Leave results.exported undefined;
+    } catch (err) {
+      console.log('Error attempting to `require`:', err);
+    } finally {
+      consoleLogSpy.mockRestore();
+      intervalSpy?.mockRestore();
+      timeoutSpy?.mockRestore();
+      randomSpy?.mockRestore();
     }
   }
 
@@ -64,7 +76,43 @@ function findAncestor(type, ancestors) {
   return null;
 }
 
+function onloadValidator(state) {
+  return ({ object, property }, ancestors) => {
+    if (object.name === 'window' && property.type === 'Identifier') {
+      if (property.name === 'addEventListener') {
+        const callExpression = findAncestor('CallExpression', ancestors);
+        if (callExpression) {
+          if (callExpression.arguments.length === 2) {
+            if (
+              ['load', 'DOMContentLoaded'].includes(
+                callExpression.arguments[0].value
+              )
+            ) {
+              state.onload = true;
+            }
+            if (callExpression.arguments[1].type === 'CallExpression') {
+              state.callError = true;
+            }
+          }
+        }
+      } else if (property.name === 'onload') {
+        const assignmentExpression = findAncestor(
+          'AssignmentExpression',
+          ancestors
+        );
+        if (assignmentExpression) {
+          state.onload = true;
+          if (assignmentExpression.right.type === 'CallExpression') {
+            state.callError = true;
+          }
+        }
+      }
+    }
+  };
+}
+
 module.exports = {
   beforeAllHelper,
   findAncestor,
+  onloadValidator,
 };

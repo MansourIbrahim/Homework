@@ -28,7 +28,18 @@ You will be spending a lot of time in [VSCode](https://code.visualstudio.com/) w
 code homework
 ```
 
-When you open the repository for the first time you may be invited to install a set of recommended VSCode extensions. These extensions will provide useful help and guidance while you are working files in VSCode. Please install these extensions when invited to do so.
+### Install Recommended VSCode Extensions
+
+**Important**: When you open the repository for the first time you may be invited to install a set of **recommended VSCode extensions**. These extensions will provide useful help and guidance when you are creating and editing files in VSCode. **Please install these extensions when invited to do so.**
+
+<details>
+  <summary>Manual installation</summary>
+
+<br>If for some reason you do not see the VSCode message box inviting you to install the recommended extensions you can do so manually by clicking the **Extensions** button in the VSCode sidebar, pressing the **Filter** button and then selecting **Recommended** from the drop-down menu as shown in the figure below. Please install all extensions listed under the **Workspace Recommendations** header.
+
+![VSCode Recommended Extensions](./assets/vscode-recommended-extensions.png)
+
+</details>
 
 ### Overview of the Directory Structure
 
@@ -37,7 +48,7 @@ The directory structure containing the homework for a specific curriculum module
 ![directory structure](./assets/directory-structure.png)
 <br>Figure 1. Directory Structure for the `1-JavaScript` folder.
 
-> A similar directory structure exists for the **Browser** module (`2-Browsers`) and the **Using-APIs** module (`3-Using-APIs`).
+> A similar directory structure exists for the **Browser** module (`2-Browsers`) and the **UsingAPIs** module (`3-UsingAPIs`).
 
 Each `homework` folder contains sub-folders and files that make up the exercises. The exercises consist of starter files that you need to complete. Some exercises consist of a single JavaScript (for example, `ex1-giveCompliment.js`). Exercises that are browser-based are mostly contained in sub-folders (for example, `ex1-bookList` in the `1-Browsers/homework` folder).
 
@@ -292,7 +303,7 @@ In addition, a log of the test results is written to a log file in the root dire
 
 - [Week 1](/2-Browsers/Week1/README.md)
 
-### Using-APIs Module
+### UsingAPIs Module
 
 - [Week 1](/3-UsingAPIs/Week1/README.md)
 - [Week 2](/3-UsingAPIs/Week2/README.md)

@@ -1,17 +1,18 @@
 /* eslint-disable hyf/camelcase */
-'use strict';
 const walk = require('acorn-walk');
 const { beforeAllHelper } = require('../../../test-runner/unit-test-helpers');
 
-describe('rollTheDices', () => {
+describe('ex4-pokerDiceAll', () => {
   const state = {};
-  let rootNode;
+  let exported, rootNode, rollTheDices;
 
   beforeAll(() => {
-    ({ rootNode } = beforeAllHelper(__filename, {
+    ({ exported, rootNode } = beforeAllHelper(__filename, {
+      nukeTimers: true,
+      zeroRandom: true,
       parse: true,
-      noRequire: true,
     }));
+    rollTheDices = exported;
 
     rootNode &&
       walk.simple(rootNode, {
@@ -23,7 +24,58 @@ describe('rollTheDices', () => {
       });
   });
 
+  it('should exist and be executable', () => {
+    expect(exported).toBeDefined();
+  });
+
   it('should use `Promise.all()`', () => {
+    if (!exported) return;
     expect(state.promiseAll).toBeDefined();
+  });
+
+  it('should resolve when all dices settle successfully', () => {
+    if (!exported) return;
+    expect.assertions(2);
+
+    const logSpy = jest.spyOn(console, 'log').mockImplementation();
+    const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+    const setTimeoutSpy = jest
+      .spyOn(global, 'setTimeout')
+      .mockImplementation((cb) => cb());
+
+    const promise = rollTheDices();
+    expect(promise).toBeInstanceOf(Promise);
+    const assertionPromise = expect(promise).resolves.toBeDefined();
+
+    promise.finally(() => {
+      setTimeoutSpy.mockRestore();
+      randomSpy.mockRestore();
+      logSpy.mockRestore();
+    });
+
+    return assertionPromise;
+  });
+
+  it('should reject with an Error when a dice rolls off the table', async () => {
+    if (!exported) return;
+    expect.assertions(2);
+
+    const logSpy = jest.spyOn(console, 'log').mockImplementation();
+    const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+    const setTimeoutSpy = jest
+      .spyOn(global, 'setTimeout')
+      .mockImplementation((cb) => cb());
+
+    try {
+      const promise = rollTheDices();
+      expect(promise).toBeInstanceOf(Promise);
+      await promise;
+    } catch (err) {
+      expect(err).toBeInstanceOf(Error);
+    } finally {
+      setTimeoutSpy.mockRestore();
+      randomSpy.mockRestore();
+      logSpy.mockRestore();
+    }
   });
 });
