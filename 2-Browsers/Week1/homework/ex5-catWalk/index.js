@@ -15,8 +15,30 @@
    for 5 seconds, and then replace the img with the original image and have it 
    continue the walk.
 -----------------------------------------------------------------------------*/
+
+const catImage = document.getElementsByTagName('img')[0];
+catImage.style.left = '0px';
+const catScreen = window.innerWidth;
+const imgWidth = catImage.width;
+let crossedCenter;
 function catWalk() {
   // TODO complete this function
-}
+
+catImage.style.left = parseInt(catImage.style.left) + 10 + 'px';
 
 // TODO execute `catWalk` when the browser has completed loading the page
+if(parseInt(catImage.style.left) > (window.innerWidth-catImage.width)){
+  catImage.style.left = '0px'
+  crossedCenter = false
+}
+if(!crossedCenter && parseInt(catImage.style.left) >= (catScreen-imgWidth)/2){
+  crossedCenter= true
+  clearInterval(timeUp)
+  catImage.src="https://media1.tenor.com/images/21c7828fb688389650fc98881498fcc0/tenor.gif?itemid=15394423"
+setTimeout(function() {
+       catImage.src="http://www.anniemation.com/clip_art/images/cat-walk.gif"
+       timeUp=setInterval(catWalk,50)
+}, 5000);
+}
+let timeUp=setInterval(catWalk,50)
+window.addEventListener("load",catWalk)

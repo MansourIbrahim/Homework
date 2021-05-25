@@ -9,3 +9,18 @@
 ------------------------------------------------------------------------------*/
 
 // TODO add your JavaScript code here.
+document.body.style.fontFamily = 'Arial, sans-serif';
+let nicKname = document.getElementById('nickname');
+let favFood = document.getElementById('fav-food');
+let homeTown = document.getElementById('hometown');
+let myName = document.createTextNode('Mans');
+let myFavFood = document.createTextNode('fish');
+let myTown = document.createTextNode('cairo');
+nicKname.appendChild(myName);
+favFood.appendChild(myFavFood);
+homeTown.appendChild(myTown);
+
+let li = document.querySelectorAll('li');
+li.forEach((list) => {
+  list.className = 'list-item';
+});

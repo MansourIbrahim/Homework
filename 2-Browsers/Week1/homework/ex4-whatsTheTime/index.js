@@ -7,6 +7,15 @@
 ------------------------------------------------------------------------------*/
 function addCurrentTime() {
   // TODO complete this function
+  document.body.removeChild(document.body.firstChild);
+  var today = new Date();
+  var time = document.createTextNode(
+    `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`
+  );
+
+  document.body.appendChild(time);
 }
 
 // TODO execute `addCurrentTime` when the browser has completed loading the page
+
+window.setInterval(addCurrentTime, 1000);
