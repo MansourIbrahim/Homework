@@ -3,8 +3,6 @@
 const walk = require('acorn-walk');
 const { beforeAllHelper } = require('../../../test-runner/unit-test-helpers');
 
-const isPromise = (obj) => typeof obj === 'object' && 'then' in obj;
-
 describe('getAnonName', () => {
   const state = { paramCount: 0 };
   let exported, rootNode, getAnonName;
@@ -24,41 +22,59 @@ describe('getAnonName', () => {
             }
           }
         },
+        FunctionDeclaration({ params }) {
+          state.paramCount = params.length;
+        },
         NewExpression({ callee }) {
           if (callee.type === 'Identifier' && callee.name === 'Promise') {
             state.newPromise = true;
           }
         },
+        CallExpression({ callee, arguments: args }) {
+          if (['resolve', 'reject'].includes(callee.name)) {
+            state[callee.name] = args.length;
+          }
+        },
       });
   });
 
-  it('should exist and be executable', () => {
+  test('should exist and be executable', () => {
     expect(exported).toBeDefined();
   });
 
-  it('should call `new Promise()`', () => {
+  test('should call `new Promise()`', () => {
     if (!exported) return;
     expect(state.newPromise).toBeDefined();
   });
 
-  it('should take a single argument', () => {
+  test('should take a single argument', () => {
     if (!exported) return;
     expect(state.paramCount).toBe(1);
   });
 
-  it('should return a resolved promise when called with a string argument', () => {
+  test(': `resolve()` should be called with a one argument', () => {
+    if (!exported) return;
+    expect(state.resolve).toBe(1);
+  });
+
+  test(': `reject()` should be called with a one argument', () => {
+    if (!exported) return;
+    expect(state.reject).toBe(1);
+  });
+
+  test('should resolve when called with a string argument', () => {
     if (!exported) return;
     expect.assertions(2);
     const promise = getAnonName('John');
-    expect(isPromise(promise)).toBe(true);
+    expect(promise).toBeInstanceOf(Promise);
     return expect(promise).resolves.toEqual('John Doe');
   });
 
-  it('should return a rejected promise when called without an argument', () => {
+  test('should reject with an Error object when called without an argument', () => {
     if (!exported) return;
     expect.assertions(2);
     const promise = getAnonName();
-    expect(isPromise(promise)).toBe(true);
+    expect(promise).toBeInstanceOf(Promise);
     return expect(promise).rejects.toBeInstanceOf(Error);
   });
 });
