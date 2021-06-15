@@ -1,0 +1,20 @@
+2021-06-14 07:17:14 info: ---------------------------------------
+2021-06-14 07:17:14 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-06-14 07:17:14 info: ---------------------------------------
+2021-06-14 07:17:14 error: Something went wrong: Invalid regular expression: /(Week\d+)\homework\/: \ at end of pattern
+2021-06-14 07:17:59 info: ---------------------------------------
+2021-06-14 07:17:59 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-06-14 07:17:59 info: ---------------------------------------
+2021-06-14 07:17:59 error: Something went wrong: Invalid regular expression: /(Week\d+)\homework\/: \ at end of pattern
+2021-06-14 07:21:29 info: ---------------------------------------
+2021-06-14 07:21:29 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-06-14 07:21:29 info: ---------------------------------------
+2021-06-14 07:21:29 error: Something went wrong: Invalid regular expression: /(Week\d+)\homework\/: \ at end of pattern
+2021-06-14 07:41:20 info: -------------------------------------------------
+2021-06-14 07:41:21 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-06-14 07:41:21 info: -------------------------------------------------
+2021-06-14 07:41:21 error: Something went wrong: Invalid regular expression: /(Week\d+)\homework\/: \ at end of pattern
+2021-06-15 10:08:03 info: ----------------------------------------------
+2021-06-15 10:08:03 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2021-06-15 10:08:03 info: ----------------------------------------------
+2021-06-15 10:08:03 error: Something went wrong: Invalid regular expression: /(Week\d+)\homework\/: \ at end of pattern

@@ -25,8 +25,14 @@ const rollDice = require('../../helpers/pokerDiceRoller');
 
 function rollTheDices() {
   // TODO Refactor this function
-  const dices = [1, 2, 3, 4, 5];
-  return rollDice(1);
+  //const dices = [1, 2, 3, 4, 5];
+  return Promise.all([
+    rollDice(1),
+    rollDice(2),
+    rollDice(3),
+    rollDice(4),
+    rollDice(5),
+  ]);
 }
 
 rollTheDices()
@@ -35,3 +41,5 @@ rollTheDices()
 
 // ! Do not change or remove the code below
 module.exports = rollTheDices;
+
+//Promise.all() does not wait for all promises to be finished. it consider the first rejection as a result.
