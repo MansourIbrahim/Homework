@@ -1,0 +1,3 @@
+*** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun --silent false --verbose false --reporters="C:\Users\Mansour\Desktop\hackyourfuture\Homework\test-runner\CustomReporter.js"

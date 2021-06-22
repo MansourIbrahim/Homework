@@ -1,0 +1,6 @@
+2021-06-21 06:20:03 info: ---------------------------------------------
+2021-06-21 06:20:04 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2021-06-21 06:20:04 info: ---------------------------------------------
+2021-06-21 06:21:48 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun --silent false --verbose false --reporters="C:\Users\Mansour\Desktop\hackyourfuture\Homework\test-runner\CustomReporter.js"

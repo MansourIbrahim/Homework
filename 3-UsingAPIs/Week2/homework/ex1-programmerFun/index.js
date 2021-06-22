@@ -17,27 +17,55 @@
 ------------------------------------------------------------------------------*/
 function requestData(url) {
   // TODO return a promise using `fetch()`
+  return fetch(url).then((response) => {
+    console.log(response);
+    return response.json();
+  });
+  // .then((data) => {
+  //   console.log(data);
+  //   return data;
+  // })
+  // .catch((error) => {
+  //   return error;
+  //   console.log('error', error);
+  // })
 }
 
 function renderImage(data) {
   // TODO render the image to the DOM
+  let img = document.createElement('img');
+  img.src = `${data.img}`;
+  document.body.appendChild(img);
+  console.log(img);
   console.log(data);
 }
 
 function renderError(error) {
   // TODO render the error to the DOM
+  let errorContainer = document.createElement('h1');
+  errorContainer.innerHTML = `${error}`;
+  document.body.appendChild(errorContainer);
   console.log(error);
 }
 
 // TODO refactor with async/await and try/catch
-function main() {
-  requestData('https://xkcd.now.sh/?comic=latest')
-    .then((data) => {
-      renderImage(data);
-    })
-    .catch((error) => {
-      renderError(error);
-    });
+// function main() {
+//   requestData('https://xkcd.now.sh/?comic=latest')
+//     .then((data) => {
+//       renderImage(data);
+//     })
+//     .catch((error) => {
+//       renderError(error);
+//     });
+// }
+
+async function main() {
+  try {
+    let data = await requestData('https://xkcd.now.sh/?comic=latest');
+    renderImage(data);
+  } catch (error) {
+    renderError(error);
+  }
 }
 
 window.addEventListener('load', main);
